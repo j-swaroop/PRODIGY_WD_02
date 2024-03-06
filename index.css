@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+*{
+    margin: 0;
+}
+
+.main-contianer{
+    background-color: rgb(20, 19, 19);
+    min-height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.responsive-container{  
+    width: 90%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.heading{
+    color: rgb(227, 227, 228);
+    font-family: 'Roboto';
+    font-size: 35px;
+    margin-top: 50px;
+}
+.stop-watch-container{
+    color: rgb(12, 13, 14);
+    font-family: 'Roboto';
+    font-size: 35px;
+    margin-top: 35px;
+    font-weight: bold;
+    background-color: rgb(205, 207, 203);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 90%;
+}
+
+.btns-container{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    max-width: 80%;
+    justify-content: space-between;
+}
+.span{
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(47, 46, 46);
+}
+@media (max-width: 576px) {
+    .stop-watch-container{
+        padding: 20px;
+        font-size: 25px;
+    }
+    .heading{
+        font-size: 28px;
+    }
+    .span{
+        font-size: 12px;
+    }
+    .btns-container{
+        max-width: 90%;
+    }
+}
+#stopBtn{
+    background-color: rgba(0, 255, 255, 0);
+    height: 60px;
+    width: 60px;
+    border: 1px solid gray;
+    color: aliceblue;
+    font-family: 'Roboto';
+    border-radius: 50%;
+    cursor: pointer;
+}
+#stopBtn:hover{
+    border: 5px solid var(--neon);
+    box-shadow: 0 0 30px var(--neon-glow);
+ 
+    --neon-glow: color(display-p3 1 1 1);
+}
+#startBtn{
+    background-color: rgba(105, 90, 205, 0);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid gray;
+    color: aliceblue;
+    font-family: 'Roboto';
+}
+#startBtn:hover{
+    border: 5px solid var(--neon);
+    box-shadow: 0 0 30px var(--neon-glow);
+ 
+    --neon-glow: color(display-p3 1 1 1);
+}
+#restartBtn{
+    background-color: rgba(255, 0, 255, 0);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid gray;
+    color: aliceblue;
+    font-family: 'Roboto';
+}
+
+#restartBtn:hover{
+    border: 5px solid var(--neon);
+    box-shadow: 0 0 30px var(--neon-glow);
+ 
+    --neon-glow: color(display-p3 1 1 1);
+}
+
+#lapBtn{
+    background-color: rgba(255, 0, 255, 0);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid gray;
+    color: aliceblue;
+    font-family: 'Roboto';
+}
+#lapBtn:hover{
+    border: 5px solid var(--neon);
+    box-shadow: 0 0 30px var(--neon-glow);
+ 
+    --neon-glow: color(display-p3 1 1 1);
+}
+
+#lapsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    height: 220px;
+    width: 300px;
+    margin-top: 38px;
+    padding-left: 0;
+    list-style-type: none;
+}
+#lapsContainer::-webkit-scrollbar{
+    /* border: 1px solid grey; */
+    border-radius: 8px;
+    width: 5px;
+}
+#lapsContainer::-webkit-scrollbar-thumb{
+    border: 1px solid rgb(128, 127, 127);
+    border-radius: 8px;
+    background-color: rgb(106, 106, 106);
+}
+.lap{
+    color: rgb(205, 205, 207);
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+.each-lap-container{
+    margin-bottom: 15px;
+    width: 90%;
+    background-color: rgb(28, 29, 29); 
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.remove-lap-btn{
+    background-color: transparent;
+    border: 1px solid grey;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: rgb(208, 208, 208);
+    font-weight: bold;
+}
+
+@media (max-width: 576px){
+    #lapsContainer{
+        width: 90%;
+        max-width: 300px;
+    }
+}
